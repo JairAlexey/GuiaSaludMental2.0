@@ -1,0 +1,39 @@
+﻿@model Capacitaciones
+@{
+    ViewData["Title"] = "Visualizar Cita";
+}
+
+<div class="text-center">
+    <h1 class="display-4">VISUALIZAR CAPACITACION</h1>
+
+    <form class="col-sm-4 mx-auto my-auto" method="post">
+
+
+        <div class="form-group mb-5">
+            <label for="text">Titulo</label>
+            <input asp-for="Titulo" class="form-control mt-2 placeholder-black" placeholder="Ingrese un tiutlo" readonly>
+        </div>
+
+
+        <div class="form-group mb-5">
+            <label for="text">Fecha</label>
+            <input asp-for="Fecha" class="form-control mt-2 placeholder-black" placeholder="Ingrese una fecha" readonly>
+        </div>
+
+        <div class="form-group mb-5">
+            <label for="text">Descripcion</label>
+            <input asp-for="Descripcion" class="form-control mt-2 placeholder-black" placeholder="Ingrese una descripcion" readonly>
+        </div>
+
+        <div class="form-group mb-5">
+            <label for="text">Precio</label>
+            <input asp-for="Precio" class="form-control mt-2 placeholder-black" placeholder="Ingrese el precio" readonly>
+        </div>
+
+        <div class="form-group mb-5">
+            <a asp-action="index" class="btn btn-warning">Volver</a>
+        </div>
+
+    </form>
+
+</div>

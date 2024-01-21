@@ -1,0 +1,67 @@
+﻿@*
+    Layout = null;
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuiaSaludMental</title>
+    <meta name="description" content="Página web de salud Mental">
+
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="~/css/sitioweb/normalize.css" rel="stylesheet" />
+    <link href="~/css/sitioweb/style2.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" asp-area="" asp-controller="Home" asp-action="PaginaInicio">
+                    <h1 class="logo__nombre no-margin centrar-texto">Guia<span class="logo__bold">SaludMental</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a class="navegacion__enlace" asp-area="" asp-controller="Capacitaciones" asp-action="Index">Administrador</a>
+                    <a class="navegacion__enlace" asp-area="" asp-controller="Home" asp-action="Formulario">Cuentanos</a>
+                    <a class="navegacion__enlace" asp-area="" asp-controller="Home" asp-action="Nosotros">Nosotros</a>
+                    <a class="navegacion__enlace" asp-area="" asp-controller="Home" asp-action="Contactanos">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="acciones-header">
+            <a class="boton boton--icono boton--casa" asp-area="" asp-controller="Home" asp-action="PaginaInicio">
+                <i class="fas fa-home">
+                    <img src="~/img/dev-icon-183.svg" alt="Icono de casa">
+                </i>
+            </a>
+            <a class="boton boton--secundario" asp-area="" asp-controller="Acceso" asp-action="Login">Login</a>
+        </div>
+
+        <div class="imagenPortada">
+            <img src="~/img/canva2.png" alt="Imagen de portada">
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Informacion sobre la salud mental con consejos y charlas</h2>
+            <p class="no-margin">Obten informacion y charla con personas especializadas en psicologia</p>
+        </div>
+    </header>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Bulimia</a>
+            <a href="#">Ansiedad</a>
+            <a href="#">Bullying</a>
+            <a href="#">Juegos</a>
+            <a asp-area="" asp-controller="Home" asp-action="Test">Test</a>
+        </nav>
+    </div>
+<</body>
+</html>

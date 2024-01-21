@@ -1,0 +1,191 @@
+﻿@{
+    ViewData["Title"] = "Contactanos Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuíaSaludMental</title>
+    <meta name="description" content="Página web de Salud Mental">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="anonymous" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="~/css/sitioweb/style2.css" rel="stylesheet" />
+    <link href="~/css/barralateral/style.css" rel="stylesheet" />
+    <link href="~/css/sitioweb/normalize.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <ion-icon id="cloud" name="menu-outline"></ion-icon>
+                <span>Menú</span>
+            </div>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="PaginaInicio">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="AcosoIndex">
+                        <ion-icon name="hand-left-outline"></ion-icon>
+                        <span>Acoso</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="TrastornoIndex">
+                        <ion-icon name="extension-puzzle-outline"></ion-icon>
+                        <span>Trastorno</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Legal">
+                        <ion-icon name="library-outline"></ion-icon>
+                        <span>Legal</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Seguridad">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <span>Seguridad</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Ayuda">
+                        <ion-icon name="heart-half-outline"></ion-icon>
+                        <span>Ayuda</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Nosotros">
+                        <ion-icon name="storefront-outline"></ion-icon>
+                        <span>Nosotros</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Contactanos">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+
+            <div class="modo-oscuro">
+                <div class="info">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <span>Dark Mode</span>
+                </div>
+                <div class="switch">
+                    <div class="base">
+                        <div class="circulo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usuario">
+                <img src="~/img/barraLateral/user_icon.png" />
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <a class="nombre" asp-area="" asp-controller="Acceso" asp-action="Login">Iniciar Sesión</a>
+                        <a class="email" asp-area="" asp-controller="Home" asp-action="PaginaInicio">O Registrarse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="contenedor">
+            <div class="barrapagina">
+                <a class="logo" asp-area="" asp-controller="Home" asp-action="PaginaInicio">
+                    <h1 class="logo__nombre no-margin centrar-texto">Guía<span class="logo__bold">SaludMental</span></h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="imagenPortada">
+            <img src="~/img/trastornos/canva2.png" alt="Imagen de portada" />
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Información sobre la salud mental con consejos y charlas</h2>
+            <p class="no-margin">Obtén información y charla con personas especializadas en psicología</p>
+        </div>
+    </header>
+    <main class="contenedor">
+        <h3 class="centrar-texto">Contacto</h3>
+
+        <div class="contacto-bg">
+            <img src="~/img/Trastornos/BANNER3.png" />
+        </div>
+
+        <form class="formulario">
+            <div class="campo">
+                <label class="campo__label" for="nombre">Nombre</label>
+                <input class="campo__field"
+                       type="text"
+                       placeholder="Tu Nombre"
+                       id="nombre">
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="email">E-mail</label>
+                <input class="campo__field"
+                       type="email"
+                       placeholder="Tu E-mail"
+                       id="email">
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="mensaje">Mensaje</label>
+                <textarea class="campo__field campo__field--textarea"
+                          id="mensaje"></textarea>
+            </div>
+
+            <div class="campo">
+                <input type="submit" value="Enviar" class="boton boton--primario">
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barrapagina">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Guía<span class="logo__bold">SaludMental</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a class="navegacion__enlace" asp-area="" asp-controller="Home" asp-action="TrastornoIndex">Acoso</a>
+                    <a class="navegacion__enlace" asp-area="" asp-controller="Home" asp-action="TrastornoIndex">Trastorno</a>
+                    <a class="navegacion__enlace" asp-area="" asp-controller="Home" asp-action="TrastornoIndex">Legal</a>
+                    <a class="navegacion__enlace" asp-area="" asp-controller="Home" asp-action="Seguridad">Seguridad</a>
+                    <a class="navegacion__enlace" asp-area="" asp-controller="Home" asp-action="Ayuda">Ayuda</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="~/js/barralateral/site.js"></script>
+    <script src="js/modernizr.js"></script>
+</body>
+</html>

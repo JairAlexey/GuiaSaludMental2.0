@@ -1,0 +1,44 @@
+﻿@model List<Capacitaciones>;
+
+@{
+    ViewData["Title"] = "Inicio Capacitaciones";
+    var capacitaciones = Model;
+}
+
+
+<h1 class="display-4">LISTA CAPACITACIONES</h1>
+
+<button type="button" class="btn btn-dark mb-3" onclick="location.href='@Url.Action("Create", "Capacitaciones")'">Crear</button>
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">IdCapacitaciones</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var capacitacion in capacitaciones)
+        {
+            <tr>
+                <td>@capacitacion.IdCapacitaciones</td>
+                <td>@capacitacion.Titulo</td>
+                <td>@capacitacion.Fecha</td>
+                <td>@capacitacion.Descripcion</td>
+                <td>@capacitacion.Precio</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a asp-action="Details" asp-route-IdCita="@capacitacion.IdCapacitaciones" class="btn btn-primary me-2"><i class="bi bi-eye-fill"></i></a>
+                        <a asp-action="Edit" asp-route-IdCita="@capacitacion.IdCapacitaciones" class="btn btn-warning me-2"><i class="bi bi-pencil-square"></i></a>
+                        <a asp-action="Delete" asp-route-IdCita="@capacitacion.IdCapacitaciones" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                    </div>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

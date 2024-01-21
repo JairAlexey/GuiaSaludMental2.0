@@ -1,0 +1,42 @@
+﻿@model Capacitaciones
+@{
+    ViewData["Title"] = "Editar Capacitaciones";
+}
+
+<div class="text-center">
+    <h1 class="display-4">EDITAR CAPACITACIONES</h1>
+
+    <form class="col-sm-4 mx-auto my-auto" method="POST">
+
+        <div class="form-group mb-5 mt-4">
+            <label for="exampleInputEmail1">Titulo</label>
+            <input asp-for="Titulo" class="form-control mt-2 placeholder-black" placeholder="Ingrese un titulo">
+        </div>
+
+        <div class="form-group mb-5">
+            <label for="exampleInputEmail1">Descripción</label>
+            <input asp-for="Descripcion" class="form-control mt-2 placeholder-black" placeholder="Ingrese la descripción de la descripcion">
+        </div>
+
+        <div class="form-group mb-5">
+            <label for="fecha">Fecha</label>
+            <input asp-for="Fecha" class="form-control mt-2 placeholder-black" placeholder="Ingrese la fecha de la capacitacion">
+        </div>
+
+        <div class="form-group mb-5">
+            <label for="exampleInputEmail1">Precio</label>
+            <input asp-for="Precio" class="form-control mt-2 placeholder-black" placeholder="Ingrese el precio de la capacitacion">
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-6 col-md-6">
+                <a asp-action="Index" class="btn btn-warning">Volver</a>
+            </div>
+            <div class="col-6 col-md-6">
+                <button type="submit" class="btn btn-success">Enviar</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
